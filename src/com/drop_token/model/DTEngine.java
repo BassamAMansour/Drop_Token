@@ -141,16 +141,16 @@ public class DTEngine implements IDTEngine {
     private boolean updateHorizontalStreaksOnRight(int row, int column) {
 
         Slot currentSlot = board[row][column];
-        Slot nextSlotOnLeft;
+        Slot nextSlotOnRight;
 
         int maxHorizontalStreak = currentSlot.getStreakHorizontal();
 
         for (int columnIndex = column + 1; columnIndex < boardSize; columnIndex++) {
 
-            nextSlotOnLeft = board[row][columnIndex];
+            nextSlotOnRight = board[row][columnIndex];
 
-            if (currentSlot.equals(nextSlotOnLeft)) {
-                nextSlotOnLeft.setStreakHorizontal(currentSlot.getStreakHorizontal() + 1);
+            if (currentSlot.equals(nextSlotOnRight)) {
+                nextSlotOnRight.setStreakHorizontal(currentSlot.getStreakHorizontal() + 1);
                 maxHorizontalStreak++;
             } else {
                 break;

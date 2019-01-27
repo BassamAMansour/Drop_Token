@@ -63,6 +63,8 @@ public class DTConsoleManager implements IDTConsoleManager {
     @Override
     public void exit() {
         out.println("EXIT");
+        in.close();
+        out.close();
     }
 
     @Override
